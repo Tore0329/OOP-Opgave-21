@@ -43,6 +43,7 @@ namespace ConsoleApp103
             string coinChoice = string.Empty;
             Coin coin = new Coin();
             string outcome = "lost";
+            Console.Write("[H] - Heads\n[T] - Tails");
             while (coinChoice == string.Empty)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -61,7 +62,7 @@ namespace ConsoleApp103
 
             if (coinChoice == coin.State) outcome = "won";
             Console.Clear();
-            Console.Write($"\nYou {outcome}!\n\nOutcome: {coin.State}");
+            Console.Write($"You {outcome}!\n\nOutcome: {coin.State}");
             Console.ReadKey();
         }
 
@@ -109,11 +110,11 @@ namespace ConsoleApp103
         private static string SChoice()
         {
             string sChoice = string.Empty;
+            Console.Clear();
+            Console.Write("[E] - Even\n[O] - Odd");
 
-            while (sChoice != string.Empty)
+            while (sChoice == string.Empty)
             {
-                Console.Clear();
-                Console.Write("[E] - Even\n[O] - Odd");
                 Console.ForegroundColor = ConsoleColor.Black;
                 var choice = Console.ReadKey();
                 Console.ResetColor();
@@ -135,7 +136,7 @@ namespace ConsoleApp103
         {
             int n = 77;
 
-            while (n != 77)
+            while (n == 77)
             {
                 Console.Clear();
                 Console.Write("Input number (0-36): ");
@@ -201,7 +202,7 @@ namespace ConsoleApp103
                 }
                 else if (choice.KeyChar == 'S' || choice.KeyChar == 's') running = false;
             }
-
+            Thread.Sleep(2000);
             Console.Clear();
             Console.WriteLine("Dealer dealing...");
             Thread.Sleep(2000);
