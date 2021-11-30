@@ -17,14 +17,14 @@ namespace ConsoleApp103
         internal Spin()
         {
             Random r = new Random();
-            Value = r.Next(0, 37);
+            Value = r.Next(0, 1);
 
             if (Value == 0)
             {
                 State = null;
                 Color = "Green";
             }
-            if (Value%2 == 0)
+            else if (Value%2 == 0)
             {
                 State = "Even";
                 Color = "Red";
