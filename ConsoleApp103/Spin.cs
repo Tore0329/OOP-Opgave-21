@@ -17,7 +17,7 @@ namespace ConsoleApp103
         internal Spin()
         {
             Random r = new Random();
-            Value = r.Next(0, 1);
+            Value = r.Next(0, 37);
 
             if (Value == 0)
             {
